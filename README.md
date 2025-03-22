@@ -2,7 +2,6 @@
 
 Ce projet est structuré en plusieurs dossiers pour gérer les déploiements, la surveillance, la sécurité, les tests de performance et la configuration des environnements dans un cluster Kubernetes.
 
-![Image](https://github.com/user-attachments/assets/ec487b29-4952-437c-acb8-9e851a4416c4)
 ---
 
 ## 1. **Déploiement des Applications**
@@ -11,6 +10,7 @@ Ce projet est structuré en plusieurs dossiers pour gérer les déploiements, la
   - Appliquer les fichiers YAML pour déployer les applications dans les environnements de développement, test et production.
   - Exemple : `kubectl apply -f deployment.yaml`.
 
+![Image](https://github.com/user-attachments/assets/7b387319-cd18-484a-8933-43dacd1f167b)
 ---
 
 ## 2. **Surveillance et Monitoring**
@@ -21,6 +21,7 @@ Ce projet est structuré en plusieurs dossiers pour gérer les déploiements, la
   - Accéder à Grafana via `kubectl port-forward`.
   - Exemple : `kubectl apply -f monitoring/prometheus/deployment.yaml`.
 
+![Image](https://github.com/user-attachments/assets/c4e3af36-6b5b-4027-8ce1-5411418fe93d)
 ---
 
 ## 3. **Configuration de la Sécurité**
@@ -60,7 +61,9 @@ Ce projet est structuré en plusieurs dossiers pour gérer les déploiements, la
   - Déployer Jenkins et configurer les pipelines.
   - Exemple : `kubectl apply -f jenkins-deployment.yaml`.
 
-![Image](https://github.com/user-attachments/assets/9b635ff4-471b-4d6a-bda0-e66861b8b3f1)
+![image](https://github.com/user-attachments/assets/3ff64b70-ca11-44f8-a75f-86fb07789678)
+![Image](https://github.com/user-attachments/assets/5232ec6c-5df4-431b-b50b-55f16cc7f5d4)
+
 ---
 
 ## 7. **Cluster Configuration**
@@ -70,6 +73,7 @@ Ce projet est structuré en plusieurs dossiers pour gérer les déploiements, la
   - Initialiser Minikube et appliquer les configurations des nœuds.
   - Exemple : `minikube start --nodes=3`.
 
+![Image](https://github.com/user-attachments/assets/a032d44d-6040-4b40-9d99-619910d7cfaa)
 ---
 
 ## Commandes Utiles
