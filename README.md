@@ -60,6 +60,7 @@ Ce projet est structuré en plusieurs dossiers pour gérer les déploiements, la
   - Déployer Jenkins et configurer les pipelines.
   - Exemple : `kubectl apply -f jenkins-deployment.yaml`.
 
+![Image](https://github.com/user-attachments/assets/9b635ff4-471b-4d6a-bda0-e66861b8b3f1)
 ---
 
 ## 7. **Cluster Configuration**
