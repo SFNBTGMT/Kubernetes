@@ -2,6 +2,7 @@
 
 Ce projet est structuré en plusieurs dossiers pour gérer les déploiements, la surveillance, la sécurité, les tests de performance et la configuration des environnements dans un cluster Kubernetes.
 
+![Image](https://github.com/user-attachments/assets/ec487b29-4952-437c-acb8-9e851a4416c4)
 ---
 
 ## 1. **Déploiement des Applications**
