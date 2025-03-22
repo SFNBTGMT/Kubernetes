@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: stress-test-scenario-2
+  namespace: development
+spec:
+  template:
+    spec:
+      containers:
+      - name: jmeter
+        image: justb4/jmeter:5.4.1
+        command: ["jmeter", "-n", "-t", "/tests/scenario-2.jmx", "-l", "/results/scenario-2.jtl"]
+        volumeMounts:
+        - name: jmeter-test
+          mountPath: /tests
+        - name: jmeter-results
+          mountPath: /results
+      restartPolicy: Never
+      volumes:
+      - name: jmeter-test
+        configMap:
+          name: jmeter-test-config
+      - name: jmeter-results
+        emptyDir: {}
+  backoffLimit: 4

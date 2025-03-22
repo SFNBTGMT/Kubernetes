@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: results-fetcher
+  namespace: development
+spec:
+  containers:
+  - name: results-fetcher
+    image: busybox
+    command: ["sleep", "3600"]
+    volumeMounts:
+    - name: jmeter-results
+      mountPath: /results
+  volumes:
+  - name: jmeter-results
+    emptyDir: {}

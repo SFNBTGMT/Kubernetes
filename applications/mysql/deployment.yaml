@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: development
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5.7
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "root_password"  # Remplacez par le mot de passe root souhaité
+        - name: MYSQL_DATABASE
+          value: "wordpress"     # Remplacez par le nom de la base de données souhaitée
+        - name: MYSQL_USER
+          value: "user"          # Remplacez par le nom d'utilisateur souhaité
+        - name: MYSQL_PASSWORD
+          value: "password"      # Remplacez par le mot de passe de l'utilisateur souhaité
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mysql-persistent-storage
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-persistent-storage
+        persistentVolumeClaim:
+          claimName: mysql-pvc

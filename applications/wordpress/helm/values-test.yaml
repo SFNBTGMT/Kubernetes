@@ -1,0 +1,10 @@
+global:
+  storageClass: "manual"
+
+wordpress:
+  image:
+    tag: "latest"
+  persistence:
+    enabled: true
+    storageClass: "manual"
+    size: 10Gi

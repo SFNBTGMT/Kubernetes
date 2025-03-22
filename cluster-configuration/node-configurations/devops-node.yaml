@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devops-node
+  namespace: kube-system
+data:
+  instructions: |
+    # Labeler le nœud DevOps
+    kubectl label nodes minikube-m03 role=devops

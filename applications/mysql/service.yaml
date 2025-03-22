@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-pv
+  namespace: development
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    path: /path/to/nfs/share
+    server: <NFS_SERVER_IP>
+  storageClassName: nfs-storage
+  persistentVolumeReclaimPolicy: Retain

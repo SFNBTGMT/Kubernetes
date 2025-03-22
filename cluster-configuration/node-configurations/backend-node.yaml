@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-node
+  namespace: kube-system
+data:
+  instructions: |
+    # Labeler le nœud back-end
+    kubectl label nodes minikube-m02 role=back-end
